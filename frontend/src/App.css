@@ -1,0 +1,110 @@
+/* Body & background */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Login card centered */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-card {
+  width: 350px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  background-color: #ffffff;
+}
+
+/* Dashboard cards side by side */
+.dashboard-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  gap: 15px;
+}
+
+/* Card columns */
+.card-col {
+  flex: 1 1 30%;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+/* Card styling */
+.card {
+  border-radius: 12px;
+  padding: 20px;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+}
+
+/* Card colors */
+.available-card { background: #d1e7dd; border-left: 6px solid #0f5132; }
+.bookings-card { background: #cff4fc; border-left: 6px solid #055160; }
+.admin-card { background: #fff3cd; border-left: 6px solid #664d03; }
+
+/* Device / booking items inside cards */
+.device-item, .booking-item {
+  padding: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.device-item:hover, .booking-item:hover { background-color: rgba(0,0,0,0.05); }
+
+/* Buttons */
+button {
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  padding: 6px 12px;
+  transition: 0.2s;
+}
+
+.device-item button { background-color: #0d6efd; color: white; }
+.device-item button:hover { background-color: #0056b3; }
+
+.admin-card button { background-color: #856404; color:white; }
+.admin-card button:hover { background-color: #5c4300; }
+
+/* Responsive */
+@media (max-width: 992px) { .card-col { flex: 1 1 45%; } }
+@media (max-width: 768px) { .card-col { flex: 1 1 90%; margin-left:auto; margin-right:auto; } }
+.status-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.status-dot.active { background-color: #28a745; } /* booked by user */
+.status-dot.other { background-color: #dc3545; } /* booked by others / past */
+.status-dot.available { background-color: #ffc107; } /* available */
+
+.card-hover { transition: transform 0.2s, box-shadow 0.2s; }
+.card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.25); }
+
+.header-bar { background: #f8f9fa; padding: 10px 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }

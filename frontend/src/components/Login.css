@@ -1,0 +1,65 @@
+/* Full gradient background */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+/* Center login card */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Card styling */
+.login-card {
+  width: 380px;
+  padding: 30px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  border: none;
+  text-align: center;
+}
+
+/* Card title */
+.login-card .card-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Buttons */
+.login-btn {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: linear-gradient(90deg, #2575fc, #6a11cb);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Input group */
+.input-group-text {
+  background: #6a11cb;
+  border: none;
+  color: #fff;
+}
+
+.form-select {
+  border-radius: 0 8px 8px 0;
+}
+
+/* Shadow */
+.shadow-lg {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
