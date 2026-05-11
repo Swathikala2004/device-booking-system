@@ -10,7 +10,11 @@ const bookingRoutes = require("./routes/bookingRoutes");
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: ["https://device-booking-system-7db1.vercel.app"],
+  credentials: true
+}));
+
 app.use(express.json());
 
 // DB connection
